@@ -15,8 +15,18 @@ RUN git clone https://github.com/CycloneDX/cyclonedx-core-java.git
 
 RUN git clone https://github.com/CycloneDX/cyclonedx-dotnet.git
 
-#RUN npm install --include-dev
+#Volume volu
 
-#RUN npm install -g @cyclonedx/bom
+RUN git clone https://github.com/skeeto/sample-java-project.git
+
+WORKDIR sample-java-project
+
+#copy sample-java-project /volu
+#COPY ./app /volume2
+
+RUN npm install --include-dev
+
+RUN npm install -g @cyclonedx/bom
 
 RUN curl -sSfL https://raw.githubusercontent.com/anchore/syft/main/install.sh | sh -s -- -b /usr/local/bin
+RUN curl -sSfL https://raw.githubusercontent.com/anchore/grype/main/install.sh | sh -s -- -b /usr/local/bin
