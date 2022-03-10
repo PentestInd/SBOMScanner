@@ -3,7 +3,6 @@
 
 **Creating Volume:**
 $ sudo docker volume create vol
-vol
 
 **Inspecting Volume to know container path:**
 sudo docker volume inspect vol
