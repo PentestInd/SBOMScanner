@@ -4,3 +4,7 @@ services:
                 build: .
         cyclonedx:
                 image: "cyclonedx/cyclonedx-cli"
+                #        dotnet:
+                #image: "cyclonedx/cyclonedx-dotnet"
+                # python:
+                #image: "cyclonedx/cyclonedx-python"
