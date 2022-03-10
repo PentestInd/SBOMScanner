@@ -6,6 +6,7 @@ $ sudo docker volume create vol
 
 **Inspecting Volume to know container path:**
 sudo docker volume inspect vol
+
 [
     {
         "CreatedAt": "2022-03-10T13:28:35Z",
