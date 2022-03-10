@@ -42,12 +42,12 @@ RUN apt-get -qq -y install curl
 RUN curl -sSfL https://raw.githubusercontent.com/anchore/syft/main/install.sh | sh -s -- -b /usr/local/bin
 RUN curl -sSfL https://raw.githubusercontent.com/anchore/grype/main/install.sh | sh -s -- -b /usr/local/bin
 
-FROM mcr.microsoft.com/dotnet/core/sdk:2.1
+#FROM mcr.microsoft.com/dotnet/core/sdk:2.1
 
 #ENV NBGV_VERSION 2.3.0
 
-RUN dotnet tool install --global CycloneDX --version 2.3.0
+#RUN dotnet tool install --global CycloneDX --version 2.3.0
 
-ENV PATH="/root/.dotnet/tools:${PATH}"
+#ENV PATH="/root/.dotnet/tools:${PATH}"
 
 #ENTRYPOINT ["nbgv"]
