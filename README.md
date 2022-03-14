@@ -4,6 +4,11 @@
 **Creating Volume:**
 $ sudo docker volume create vol
 
+**Running container with volume:** 
+$docker run -it --name docvolcon2 -v "$(pwd)"/pencilblue:/sbomnodejs docker_web
+
+
+
 **Inspecting Volume to know container path:**
 sudo docker volume inspect vol
 
@@ -18,5 +23,7 @@ sudo docker volume inspect vol
         "Scope": "local"
     }
 ]
+**
+Command to run dependency track:**
 
-Create Dockerfile to clone sample code 
+docker run -d -m 8192m -p 8080:8080 --name dependency-track -v dependency-track:/data dependencytrack/bundled
