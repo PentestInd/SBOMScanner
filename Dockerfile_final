@@ -1,0 +1,46 @@
+From debian:latest
+
+RUN apt-get update
+
+RUN apt install -y git
+
+RUN apt install -y curl
+
+RUN apt-get -y install python3
+RUN apt-get -y install python3-setuptools
+RUN apt-get -y install python3-pip
+RUN apt-get -y install npm
+
+#RUN git clone https://github.com/CycloneDX/cyclonedx-core-java.git
+
+#RUN git clone https://github.com/CycloneDX/cyclonedx-dotnet.git
+
+#RUN git clone https://github.com/CycloneDX/cyclonedx-python.git
+
+#RUN pip install cyclonedx-bom
+
+#RUN pip freeze > requirements.txt
+#Volume vol
+
+#RUN git clone https://github.com/skeeto/sample-java-project.git
+
+#copy /sample-java-project /vol
+
+#RUN mkdir /sbomjava1
+
+#WORKDIR /sbomjava1
+#RUN git clone https://github.com/mgiatti/dev-radar-backend.git /sbompython
+
+#volume ["/sbompython"]
+
+#copy /dev-radar-backend /sbomjava
+#COPY ./app /volume2
+
+RUN npm install
+
+RUN npm install --include-dev
+
+RUN npm install -g @cyclonedx/bom
+
+RUN curl -sSfL https://raw.githubusercontent.com/anchore/syft/main/install.sh | sh -s -- -b /usr/local/bin
+RUN curl -sSfL https://raw.githubusercontent.com/anchore/grype/main/install.sh | sh -s -- -b /usr/local/bin
