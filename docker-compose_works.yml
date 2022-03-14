@@ -1,0 +1,28 @@
+version: "3.9"
+services:
+        web:
+                build: .
+        cyclonedx:
+                image: "cyclonedx/cyclonedx-cli"
+                #        dotnet:
+                #image: "cyclonedx/cyclonedx-dotnet"
+                #python:
+                #cyclonepython:
+                #image: "cyclonedx/cyclonedx-python"
+                #apt: python-pip3
+                #pip: freeze > requirements.txt
+                # app: 
+                #build: .
+                #dockerfile:  Dockerfile
+                #depends_on:
+                #       - cyclonedx
+                #cyclonedx-python:  -------> This is not working. Raised a ticket
+                #build: cyclonedx-python                  
+        cyclonedx-node-module:
+                build: cyclonedx-node-module
+                #cyclonedx-dotnet:
+                #build: cyclonedx-dotnet
+        cyclonedot:
+                image: "cyclonedx/cyclonedx-dotnet"
+#        cyclonedx-core-java:
+#                build: cyclonedx-core-java
