@@ -6,6 +6,9 @@ $ sudo docker volume create vol
 
 **Running container with volume:** 
 $docker run -it --name docvolcon2 -v "$(pwd)"/pencilblue:/sbomnodejs docker_web
+or
+ docker run --rm -it --name test4 -v "$(pwd)"/create-nodejs-project:/vol3 8a37256c9914 /bin/bash
+ #vol3 is volume created and /create-nodejs-project is from github
 
 
 **Inspecting Volume to know container path:**
