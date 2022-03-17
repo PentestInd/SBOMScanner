@@ -37,3 +37,8 @@ curl -v -H 'X-API-KEY: ON2YbnaXv3fR7o7krD1bdiUGiSl008H8' -H 'Content-Type: multi
 **Command to upload BOM as base64 encoded data:**
 curl -v -X "PUT" "http://localhost:8080/api/v1/bom" -H 'Content-Type: application/json' -H 'X-API-KEY: ON2YbnaXv3fR7o7krD1bdiUGiSl008H8' -d $'{"project": "758fe80a-ae76-451b-a298-ac2816b5c5f5", "scan": "$(cat bom.xml | base64 - )"}'
 
+Command to execute BOM in python:
+$docker run --rm -itd --name test5 -v "$(pwd)"/dvpwa:/vol4 e907273b5c40 /bin/bash
+7d8c2b322f6b83489b43b20521ada52e86e4f6b9c18713cdee4103647bee1d73
+
+$docker exec -it 
