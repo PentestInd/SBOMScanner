@@ -42,3 +42,11 @@ $docker run --rm -itd --name test5 -v "$(pwd)"/dvpwa:/vol4 e907273b5c40 /bin/bas
 7d8c2b322f6b83489b43b20521ada52e86e4f6b9c18713cdee4103647bee1d73
 
 $docker exec -it 
+
+#You first need to build the binary locally.
+
+#This can be achieved by running
+
+#dotnet publish src/cyclonedx/cyclonedx.csproj -r linux-x64 --configuration Release --self-contained true /p:PublishSingleFile=true /p:IncludeNativeLibrariesInSingleFile=true /p:IncludeNativeLibrariesForSelfExtract=true --output bin/linux-x64
+
+#or downloading the Linux x64 binary of the latest release and saving it to that path.
